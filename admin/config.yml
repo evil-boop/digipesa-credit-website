@@ -1,0 +1,67 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "site"
+    label: "Maudhui ya Tovuti"
+    files:
+      - file: "data/content.json"
+        label: "Ukurasa wa Nyumbani"
+        name: "content"
+        fields:
+          - label: "Sehemu ya Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Maandishi madogo (juu ya kichwa)", name: "eyebrow", widget: "string" }
+              - { label: "Kichwa cha Habari — Mstari 1", name: "headline_line1", widget: "string" }
+              - { label: "Kichwa cha Habari — Neno la Rangi ya Dhahabu", name: "headline_emphasis", widget: "string" }
+              - { label: "Kichwa cha Habari — Mstari 2", name: "headline_line2", widget: "string" }
+              - { label: "Maelezo Mafupi (Lead)", name: "lead", widget: "text" }
+              - { label: "Mwaka wa Kuanzishwa", name: "founded_year", widget: "string" }
+
+          - label: "Bidhaa — NISOGEZE"
+            name: "products"
+            widget: "object"
+            fields:
+              - label: "NISOGEZE"
+                name: "nisogeze"
+                widget: "object"
+                fields:
+                  - { label: "Kiasi cha Mkopo", name: "amount", widget: "string" }
+                  - { label: "Muda wa Malipo", name: "term", widget: "string" }
+                  - { label: "Riba", name: "rate", widget: "string" }
+                  - { label: "Muda wa Maamuzi", name: "decision_time", widget: "string" }
+                  - { label: "Vitakiwavyo", name: "requirements", widget: "string" }
+              - label: "Mkopo wa Biashara (SME)"
+                name: "sme"
+                widget: "object"
+                fields:
+                  - { label: "Kiasi cha Mkopo", name: "amount", widget: "string" }
+                  - { label: "Muda wa Malipo", name: "term", widget: "string" }
+                  - { label: "Riba", name: "rate", widget: "string" }
+                  - { label: "Vitakiwavyo", name: "requirements", widget: "string" }
+
+          - label: "Mawasiliano"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Namba ya Simu (inayoonekana)", name: "phone_display", widget: "string" }
+              - { label: "Namba ya Simu (kwa link — mfano +255700000000)", name: "phone_href", widget: "string" }
+              - { label: "Barua Pepe", name: "email", widget: "string" }
+              - { label: "Anwani ya Ofisi", name: "address", widget: "string" }
+              - { label: "Muda wa Kazi", name: "hours", widget: "string" }
+
+          - label: "Maswali (FAQ)"
+            name: "faq"
+            widget: "list"
+            label_singular: "Swali"
+            fields:
+              - { label: "Swali", name: "question", widget: "string" }
+              - { label: "Jibu", name: "answer", widget: "text" }
