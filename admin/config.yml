@@ -1,3 +1,4 @@
+[14:05, 8/17/2026] Peters: # Use DecapBridge PKCE auth (required)
 backend:
   name: git-gateway
   repo: evil-boop/digipesa-credit-website
@@ -108,4 +109,4 @@ collections:
             label_singular: "Swali"
             fields:
               - { label: "Swali", name: "question", widget: "string" }
-              - { label: "Jibu", name: "answer", widget: "text" }
+              - { label: "Jibu", name: "answer", widget: "text" 
