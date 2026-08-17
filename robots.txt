@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://digipesa-credit-ltd.netlify.app/sitemap.xml
